@@ -71,8 +71,10 @@ func Query(isFast bool, msg string, timeout time.Duration) string {
 
 // https://beta.openai.com/docs/api-reference/making-requests
 func completions(isFast bool, msg string, timeout time.Duration) (string, error) {
-	wordSize := 30 // 中文字符数量
-	temperature := 0.3
+	// wordSize := 30 // 中文字符数量
+	// temperature := 0.3
+	wordSize := 400 // 中文字符数量
+	temperature := 0.8
 
 	if !isFast {
 		wordSize = 800
